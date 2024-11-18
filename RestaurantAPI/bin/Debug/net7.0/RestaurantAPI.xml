@@ -1,0 +1,388 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RestaurantAPI</name>
+    </assembly>
+    <members>
+        <member name="M:RestaurantAPI.Controllers.AuthController.login(RestaurantAPI.Models.LoginRequestDto)">
+            <summary>
+            Login - User login with email and password
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.AuthController.Register(RestaurantAPI.Models.UserDTO)">
+            <summary>
+            Register - Register a new user
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.CategoriesController.GetAllCategories(System.Int32,System.Int32)">
+            <summary>
+            Categories - Get all the available categories
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.CategoriesController.GetCategoryById(System.Int32)">
+            <summary>
+            Categories - Get a particular catogory by its Id
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.CategoriesController.UpdateCategory(System.Int32,RestaurantAPI.Models.CategoryDTO)">
+            <summary>
+            Categories - Edit a particular catogory
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.CategoriesController.AddCategory(RestaurantAPI.Models.CategoryDTO)">
+            <summary>
+            Categories - Add a new category
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.CategoriesController.DeleteCategory(System.Int32)">
+            <summary>
+            Categories - Delete a category
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.NotificationController.CreateNotification(RestaurantAPI.Models.NotificationDTO)">
+            <summary>
+            Notification - Create a new notification
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.NotificationController.UpdateNotification(System.Int32,RestaurantAPI.Models.NotificationDTO)">
+            <summary>
+            Notification - Edit or update a notification
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.NotificationController.DeleteNotification(System.Int32)">
+            <summary>
+            Notification - Delete a notification
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.NotificationController.GetAllNotifications(System.Int32,System.Int32)">
+            <summary>
+            Notification - Get all available notifications
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.NotificationController.GetNotificationById(System.Int32)">
+            <summary>
+            Notification - Get a notification by its Id
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.NotificationController.GetNotificationsByCustomerId(System.Int32)">
+            <summary>
+            Notification - Get a notification by customer Id
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.NotificationController.GetUnreadNotificationsByCustomerId(System.Int32)">
+            <summary>
+            Notification - Get an unread notification for a specific customer
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.OrderController.CreateOrder(RestaurantAPI.Models.OrderDTO)">
+            <summary>
+            Order - Create a new order
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.OrderController.UpdateOrder(System.Int32,RestaurantAPI.Models.OrderDTO)">
+            <summary>
+            Order - Update an order
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.OrderController.DeleteOrder(System.Int32)">
+            <summary>
+            Order - Delete a specific order by its Id
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.OrderController.GetAllOrders(System.Int32,System.Int32)">
+            <summary>
+            Order - Get all available orders
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.OrderController.GetOrderById(System.Int32)">
+            <summary>
+            Order - Get an order by Id
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.OrderController.GetOrderByCustomerId(System.Int32)">
+            <summary>
+            Order - Get an order by customer Id
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.OrderController.GetOrderByDeliveryPersonId(System.Int32)">
+            <summary>
+            Order - Get an order by a certain delivery person Id
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.OrderController.GetOrderByRef(System.String)">
+            <summary>
+            Order - Get an order by a reference Id
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.OrderController.GetOrderByTransactionId(System.String)">
+            <summary>
+            Order - Get an order by a transaction Id
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.ProductController.GetAllProducts(System.Int32,System.Int32)">
+            <summary>
+            Products - Get all available products
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.ProductController.AddProduct(RestaurantAPI.Models.ProductDTO)">
+            <summary>
+            Products - Add a new product
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.ProductController.UpdateProduct(System.Int32,RestaurantAPI.Models.ProductDTO)">
+            <summary>
+            Products - Update an existing product
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.ProductController.DeleteProduct(System.Int32)">
+            <summary>
+            Products - Delete a product by Id
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.ProductController.GetProduct(System.Int32)">
+            <summary>
+            Products - Get a product by Id
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.ReviewsController.GetAllReviews(System.Int32,System.Int32)">
+            <summary>
+            Reviews - Get all reviews
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.ReviewsController.AddReview(RestaurantAPI.Models.ReviewsDTO)">
+            <summary>
+            Reviews - Add a new review
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.ReviewsController.GetReviewById(System.Int32)">
+            <summary>
+            Reviews - Get a single review
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.ReviewsController.GetReviewsByFoodId(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Reviews - Get a review base on food Id
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.ReviewsController.GetReviewsByCommentedById(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Reviews - Get a review by Commented by Id
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.ReviewsController.UpdateReview(System.Int32,RestaurantAPI.Models.ReviewsDTO)">
+            <summary>
+            Reviews - Update a review by Id
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.ReviewsController.DeleteReview(System.Int32)">
+            <summary>
+            Reviews - Delete a review by Id
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.UsersController.GetAllUsers(System.Int32,System.Int32)">
+            <summary>
+            Users - Get all users
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.UsersController.GetUser(System.Int32)">
+            <summary>
+            Users - Get a user by Id
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.UsersController.GetUserByEmail(System.String)">
+            <summary>
+            Users - Get a user by their email
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.UsersController.UpdateUser(System.Int32,RestaurantAPI.Models.UserDTO)">
+            <summary>
+            Users - Update or edit a user by it Id
+            </summary>
+        </member>
+        <member name="M:RestaurantAPI.Controllers.UsersController.DeleteUser(System.Int32)">
+            <summary>
+            Users - Delete a user by it Id
+            </summary>
+        </member>
+        <member name="T:RestaurantAPI.Migrations.Initial">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.Initial.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.Initial.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.Initial.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:RestaurantAPI.Migrations.Initialss">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.Initialss.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.Initialss.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.Initialss.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:RestaurantAPI.Migrations.MappedtheentityandDTO">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.MappedtheentityandDTO.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.MappedtheentityandDTO.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.MappedtheentityandDTO.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:RestaurantAPI.Migrations.AddedReviewsandcategoriestables">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.AddedReviewsandcategoriestables.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.AddedReviewsandcategoriestables.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.AddedReviewsandcategoriestables.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:RestaurantAPI.Migrations.AddedNotificationtableinentity">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.AddedNotificationtableinentity.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.AddedNotificationtableinentity.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.AddedNotificationtableinentity.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:RestaurantAPI.Migrations.Arrangedorderproperties">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.Arrangedorderproperties.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.Arrangedorderproperties.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.Arrangedorderproperties.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:RestaurantAPI.Migrations.RenamedprodutstabletoProducts">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.RenamedprodutstabletoProducts.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.RenamedprodutstabletoProducts.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.RenamedprodutstabletoProducts.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:RestaurantAPI.Migrations.Addedextracolumns">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.Addedextracolumns.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.Addedextracolumns.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.Addedextracolumns.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:RestaurantAPI.Migrations.Rearrangedordertable">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.Rearrangedordertable.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.Rearrangedordertable.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.Rearrangedordertable.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:RestaurantAPI.Migrations.Adjustedordertable">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.Adjustedordertable.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.Adjustedordertable.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.Adjustedordertable.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:RestaurantAPI.Migrations.UpdatedNotificationtable">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.UpdatedNotificationtable.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.UpdatedNotificationtable.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.UpdatedNotificationtable.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:RestaurantAPI.Migrations.UpdatedReviewstable">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.UpdatedReviewstable.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.UpdatedReviewstable.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.UpdatedReviewstable.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:RestaurantAPI.Migrations.Addedtwocolumnsincategorytable">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.Addedtwocolumnsincategorytable.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.Addedtwocolumnsincategorytable.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.Addedtwocolumnsincategorytable.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:RestaurantAPI.Migrations.Addedtwocolumnsinproductstable">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.Addedtwocolumnsinproductstable.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.Addedtwocolumnsinproductstable.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.Addedtwocolumnsinproductstable.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:RestaurantAPI.Migrations.Added1columninproductstable">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.Added1columninproductstable.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.Added1columninproductstable.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RestaurantAPI.Migrations.Added1columninproductstable.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

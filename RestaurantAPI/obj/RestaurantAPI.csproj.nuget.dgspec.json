@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\IETECH-3\\Desktop\\SOFTWARES\\PERSONAL PROJECTS\\DesignVerse\\RestaurantAPI\\RestaurantAPI\\RestaurantAPI.csproj": {}
+    "C:\\Users\\oghen\\Desktop\\Restaurant\\RestaurantAPI\\RestaurantAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\IETECH-3\\Desktop\\SOFTWARES\\PERSONAL PROJECTS\\DesignVerse\\RestaurantAPI\\RestaurantAPI\\RestaurantAPI.csproj": {
+    "C:\\Users\\oghen\\Desktop\\Restaurant\\RestaurantAPI\\RestaurantAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\IETECH-3\\Desktop\\SOFTWARES\\PERSONAL PROJECTS\\DesignVerse\\RestaurantAPI\\RestaurantAPI\\RestaurantAPI.csproj",
+        "projectUniqueName": "C:\\Users\\oghen\\Desktop\\Restaurant\\RestaurantAPI\\RestaurantAPI.csproj",
         "projectName": "RestaurantAPI",
-        "projectPath": "C:\\Users\\IETECH-3\\Desktop\\SOFTWARES\\PERSONAL PROJECTS\\DesignVerse\\RestaurantAPI\\RestaurantAPI\\RestaurantAPI.csproj",
-        "packagesPath": "C:\\Users\\IETECH-3\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\IETECH-3\\Desktop\\SOFTWARES\\PERSONAL PROJECTS\\DesignVerse\\RestaurantAPI\\RestaurantAPI\\obj\\",
+        "projectPath": "C:\\Users\\oghen\\Desktop\\Restaurant\\RestaurantAPI\\RestaurantAPI.csproj",
+        "packagesPath": "C:\\Users\\oghen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\oghen\\Desktop\\Restaurant\\RestaurantAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\IETECH-3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\oghen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -27,7 +27,6 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,6 +39,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -52,7 +56,7 @@
             },
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
-              "version": "[12.0.1, )"
+              "version": "[12.0.0, )"
             },
             "BCrypt.Net-Next": {
               "target": "Package",
@@ -100,7 +104,7 @@
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
-              "version": "[7.0.2, )"
+              "version": "[8.2.1, )"
             }
           },
           "imports": [
@@ -122,7 +126,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
