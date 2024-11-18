@@ -12,16 +12,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: '7.0.x'
+      
       - name: Restore
         run: dotnet restore ./RestaurantAPI.sln
+      
       - name: Build
         run: dotnet build ./RestaurantAPI.sln --configuration Release --no-restore
+      
+      - name: Test # Optional: Only if you have test projects
+        run: dotnet test ./RestaurantAPI.sln --configuration Release --no-build
+      
       - name: Publish
-        run: dotnet publish ./RestaurantAPI.sln --configuration Release --no-build --output '${{ env.FTP_WEBAPP_PACKAGE_PATH }}'
+        run: dotnet publish ./RestaurantAPI.sln --configuration Release --no-build --output "${{ env.FTP_WEBAPP_PACKAGE_PATH }}"
       
       # Deployment step
       - name: Deployment
@@ -38,5 +45,5 @@ jobs:
             **/.git*
             **/.git*/**
             **/node_modules/**
-          timeout: 120000
+          timeout: 180000 # Increased timeout for larger deployments
           retries: 3
