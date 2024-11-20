@@ -25,26 +25,37 @@ namespace RestaurantAPI.Services
         {
             var response = new APIResponse();
 
-            var user = await _restaurantDbContext.Users.FirstOrDefaultAsync(x => x.Email == loginRequest.Email);
-            var NotHashedPassword = !BCrypt.Net.BCrypt.Verify(loginRequest.Password, user.Password);
-
             try
             {
-                if (user == null || NotHashedPassword) 
+
+                var user = await _restaurantDbContext.Users.FirstOrDefaultAsync(x => x.Email == loginRequest.Email);
+
+                if (user == null)
                 {
                     response.StatusCode = 404;
-                    response.ResponseMessage = "Incorrect Email or Password.";
+                    response.ResponseMessage = "User does not exist";
                     return response;
                 }
 
-                user.LastLoggedIn = DateTime.Now; // Update LastLoggedIn property
-                await _restaurantDbContext.SaveChangesAsync(); // Save changes
-                var token = _jwtTokenService.GenerateJwtToken(user);
+                else
+                {
+                    var NotHashedPassword = BCrypt.Net.BCrypt.Verify(loginRequest.Password, user.Password);
+                    if (user == null || NotHashedPassword == false)
+                    {
+                        response.StatusCode = 404;
+                        response.ResponseMessage = "Incorrect Email or Password.";
+                        return response;
+                    }
 
-                response.StatusCode = 200;
-                response.ResponseMessage = "Login Successful.";
-                response.Data = new { user, token };
-                return response;
+                    user.LastLoggedIn = DateTime.Now; // Update LastLoggedIn property
+                    await _restaurantDbContext.SaveChangesAsync(); // Save changes
+                    var token = _jwtTokenService.GenerateJwtToken(user);
+
+                    response.StatusCode = 200;
+                    response.ResponseMessage = "Login Successful.";
+                    response.Data = new { user, token };
+                    return response;
+                }
             }
             catch (Exception ex)
             {
@@ -55,7 +66,8 @@ namespace RestaurantAPI.Services
                 return response;
             }
 
-            
+
+
         }
 
 
